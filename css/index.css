@@ -1,0 +1,67 @@
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/RobotoCondensed_regular/RobotoCondensedRegular.ttf);
+}
+
+* {
+    font-family: Roboto;
+    color: black;
+}
+
+body {
+    margin: 0;
+    background-color: black;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    height: 606px;
+    width: 337px;
+    padding: 25px;
+    border-radius: 25px;
+    display: grid;
+    grid-template-rows: repeat(auto, 1fr);
+    gap: 20px;
+    background-color: beige;
+}
+
+
+
+header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+
+    padding: 10px;
+    height: 20px;
+}
+
+header>img {
+    height: 20px;
+    width: 20px;
+
+    grid-column: 1;
+}
+
+header>div {
+    justify-self: end;
+    grid-column: 2;
+
+    font-size: 15px;
+}
+
+section {
+    min-height: 450px;
+    background-color: white;
+}
+
+footer {
+    padding: 20px 20px;
+    padding-bottom: 20px;
+
+    font-size: 15px;
+}
