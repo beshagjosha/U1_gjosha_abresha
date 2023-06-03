@@ -84,11 +84,11 @@ function create_login_or_reg_page(type, text, change_type_text) {
     main_content.appendChild(changeTypeDiv);
 
     if (type === type_register) {
-        background.style.backgroundColor = "blue";
+        background.style.backgroundColor = "#f6e1e1";
         reg_page = true;
         login_page = false;
     } else {
-        background.style.backgroundColor = "green";
+        background.style.backgroundColor = "#a4d4ae";
         reg_page = false;
         login_page = true;
     }

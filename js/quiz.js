@@ -5,7 +5,7 @@ let quiz_time = false;
 function display_quiz_page(username) {
     quiz_time = true;
     main_content.innerHTML = "";
-    background.style.backgroundColor = "yellow";
+    background.style.backgroundColor = "#d2ebe9";
 
     let username_display = document.createElement("div");
     main_content.appendChild(username_display);

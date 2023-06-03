@@ -54,23 +54,24 @@ function display_message(message_text, close_message_text) {
     message_button.addEventListener("click", button_clicked);
 
     if (message_text === "Correct!") {
-        message.style.backgroundColor = "grey";
+        message.style.backgroundColor = "#ccda46";
     } else {
-        message.style.backgroundColor = "pink";
+        message.style.backgroundColor = " #eb4d55";
+
     }
 
     function button_clicked(event) {
-        message.style.backgroundColor = "red";
 
         if (quiz_time === true) {
             remove_message();
 
-            let current_login = JSON.parse(localstorge.getItem("credentials"));
+            let current_login = JSON.parse(localStorage.getItem("credentials"));
             display_quiz_page(current_login.user_name);
         } else {
             remove_message();
         }
     }
+
 }
 
 function remove_message() {

@@ -37,12 +37,12 @@ header {
     align-items: center;
 
     padding: 10px;
-    height: 20px;
+    height: 30px;
 }
 
 header>img {
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
 
     grid-column: 1;
 }
