@@ -42,6 +42,8 @@ function quiz_handler() {
         let response = await fetch_handler(prefix);
         let resource = await response.json();
 
+        console.log(response);
+
         dog_image.setAttribute("src", resource.message);
 
         let options = document.createElement("div");

@@ -84,7 +84,7 @@ function create_login_or_reg_page(type, text, change_type_text) {
     main_content.appendChild(changeTypeDiv);
 
     if (type === type_register) {
-        background.style.backgroundColor = "#f6e1e1";
+        background.style.backgroundColor = "#84c6c6";
         reg_page = true;
         login_page = false;
     } else {
@@ -129,8 +129,8 @@ function display_login_or_reg_page(type, text, change_type_text) {
                         let credentials = {
                             user_name: username,
                         };
-                        let saved_credentails_stringified = JSON.stringify(credentials);
-                        localStorage.setItem("credentials", saved_credentails_stringified);
+                        let saved_credentials_stringified = JSON.stringify(credentials);
+                        localStorage.setItem("credentials", saved_credentials_stringified);
                     }
 
                     display_quiz_page(username_input);
@@ -153,7 +153,5 @@ function display_login_or_reg_page(type, text, change_type_text) {
             fetch_handler(POST_request);
         }
     }
-
-
 
 }

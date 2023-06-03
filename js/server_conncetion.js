@@ -32,7 +32,7 @@ async function fetch_handler(URL) {
         login_success = true;
     }
 
-    console.log(response);
+
     return response;
 }
 
@@ -54,9 +54,9 @@ function display_message(message_text, close_message_text) {
     message_button.addEventListener("click", button_clicked);
 
     if (message_text === "Correct!") {
-        message.style.backgroundColor = "#ccda46";
+        message.style.backgroundColor = "#caf1de";
     } else {
-        message.style.backgroundColor = " #eb4d55";
+        message.style.backgroundColor = " #f7d5e9";
 
     }
 

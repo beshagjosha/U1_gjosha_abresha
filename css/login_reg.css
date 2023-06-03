@@ -84,10 +84,9 @@ button:hover {
     justify-content: center;
     align-items: center;
 
-    font-size: 18 px;
 
     border-radius: 10px;
-    border: solid lightcoral 2px;
+    border: solid black 1px;
     box-sizing: border-box;
     gap: 10px;
 }

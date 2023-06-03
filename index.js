@@ -10,7 +10,7 @@ function get_image_prefix(breed_url) {
 const current_login = JSON.parse(localStorage.getItem("credentials"));
 
 if (current_login !== null) {
-    display_quiz_page(current_login.userName);
+    display_quiz_page(current_login.user_name);
 } else {
     display_login_or_reg_page(type_login, login_text, change_type_login_text);
 }

@@ -24,9 +24,9 @@ main {
     padding: 25px;
     border-radius: 25px;
     display: grid;
-    grid-template-rows: repeat(auto, 1fr);
+
     gap: 20px;
-    background-color: beige;
+
 }
 
 
