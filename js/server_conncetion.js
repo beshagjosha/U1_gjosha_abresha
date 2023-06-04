@@ -2,8 +2,9 @@
 
 let overlay = document.querySelector("#overlay");
 let message = document.querySelector("#message");
+let message_button;
 
-let login_success;
+let login_success = false;
 
 async function fetch_handler(URL) {
     if (quiz_time !== true) {
@@ -22,18 +23,26 @@ async function fetch_handler(URL) {
     } else if (
         (response.status === 404 && login_page === true) ||
         (response.status === 400 && login_page === true)
+
     ) {
         let text = document.querySelector("#text");
         text.textContent = "Wrong username or password.";
         text.classList.add("wrong_cred");
+
+
+
     } else if (response.status === 200 && reg_page === true) {
         display_message("Registration Complete. Proced to login.", "CLOSE");
     } else if (response.status === 200 && login_page === true) {
+
+
         login_success = true;
+
     }
 
 
     return response;
+
 }
 
 function display_message(message_text, close_message_text) {
@@ -46,7 +55,7 @@ function display_message(message_text, close_message_text) {
         return;
     }
 
-    let message_button = document.createElement("button");
+    message_button = document.createElement("button");
     message_button.textContent = close_message_text;
     message_button.classList.add("close_button");
     message.appendChild(message_button);
@@ -55,13 +64,13 @@ function display_message(message_text, close_message_text) {
 
     if (message_text === "Correct!") {
         message.style.backgroundColor = "#caf1de";
+
     } else {
         message.style.backgroundColor = " #f7d5e9";
 
     }
 
     function button_clicked(event) {
-
         if (quiz_time === true) {
             remove_message();
 
@@ -69,6 +78,7 @@ function display_message(message_text, close_message_text) {
             display_quiz_page(current_login.user_name);
         } else {
             remove_message();
+
         }
     }
 
@@ -79,4 +89,8 @@ function remove_message() {
 
     message.innerHTML = "";
     message.classList.remove("message");
+
+
 }
+
+
